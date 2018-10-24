@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package demo;
+
+message User {
+    int32 uid = 1;
+    string name = 2;
+    bool gender = 3;
+}
+
+message UserForm {
+    oneof field {
+        int32 uid = 1;
+        string name = 2;
+        bool gender = 3;
+    }
+}
+
